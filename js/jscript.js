@@ -1,3 +1,4 @@
+/**********************Mobile NAVIGATION********************/
 const menuNavEl = document.querySelector(".btn-mobile-nav");
 
 menuNavEl.addEventListener("click", function () {

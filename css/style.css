@@ -18,6 +18,11 @@ Shades:
 #fdf2e9
 #333
 #4d4d4d
+#5f5f5f
+
+Line Height:
+1.8
+1
 
 */
 
@@ -419,4 +424,41 @@ Shades:
 .container-all-recipes a:active {
   border-bottom: 2px solid rgba(230, 125, 34, 0);
   color: #b8651b;
+}
+
+/*****************TESTIMONIALS SECTION***********************/
+.testimonial-section {
+  padding: 4.8rem 2.4rem;
+}
+
+.slider-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.testimonial {
+  margin-top: 3.2rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #4d4d4d;
+}
+
+.testimonial-customer {
+  font-size: 1.6rem;
+  color: #5f5f5f;
+}
+
+.testimonial-customer {
+  display: block;
+  margin-top: 1.2rem;
 }
