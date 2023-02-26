@@ -46,7 +46,6 @@ body {
 .secondary-heading {
   margin-top: 1.2rem;
   font-size: 3rem;
-  text-align: center;
 }
 
 .tertiary-heading {
@@ -62,7 +61,6 @@ body {
 }
 
 /*************************/
-
 .nav-link.cta-link:link,
 .nav-link.cta-link:visited,
 .btn-link:link,

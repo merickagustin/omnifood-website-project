@@ -200,7 +200,7 @@
         <h2 class="secondary-heading">
           Omnifood AI chooses from 5,000+ recipes
         </h2>
-        <div class="subcontainer grid grid-2-columns">
+        <div class="subcontainer grid">
           <div class="meal-card grid">
             <img
               class="meal-img"
@@ -215,7 +215,7 @@
               <ul class="meal-attributes flex">
                 <li class="meal-attribute">
                   <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
-                  <span><strong>650</strong> Calories </span>
+                  <span><strong>650</strong> Calories</span>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon
@@ -341,14 +341,17 @@
         <span class="subheading">Testimonials</span>
         <h2 class="secondary-heading">Once you try it, you can't go back</h2>
         <div class="testimonials">
-          <button class="btn-slide">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+          <button class="btn-slide btn-slide--next">
+            <ion-icon class="arrow-icon" name="arrow-back-outline"></ion-icon>
           </button>
-          <button class="btn-slide">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+          <button class="btn-slide btn-slide--prev">
+            <ion-icon
+              class="arrow-icon"
+              name="arrow-forward-outline"
+            ></ion-icon>
           </button>
           <ul class="slider-container">
-            <li class="slider">
+            <li class="slider active-slide">
               <figure class="testimonial">
                 <img
                   class="testimonial-img"
@@ -362,7 +365,7 @@
                 <span class="testimonial-customer">-Dave Bryson</span>
               </figure>
             </li>
-            <!-- <li class="slider">
+            <li class="slider">
               <figure class="testimonial">
                 <img
                   class="testimonial-img"
@@ -375,8 +378,44 @@
                 </blockquote>
                 <span class="testimonial-customer">-Ben Hadley</span>
               </figure>
-            </li> -->
+            </li>
+            <li class="slider">
+              <figure class="testimonial">
+                <img
+                  class="testimonial-img"
+                  src="./img/customers/steve.jpg"
+                  alt="Image of customer named Steve Miller"
+                />
+                <blockquote class="testimonial-text">
+                  Omnifood is a life saver! I just started a company, so there's
+                  no time for cooking. I couldn't live without my daily meals
+                  now!
+                </blockquote>
+                <span class="testimonial-customer">-Steve Miller</span>
+              </figure>
+            </li>
+            <li class="slider">
+              <figure class="testimonial">
+                <img
+                  class="testimonial-img"
+                  src="./img/customers/hannah.jpg"
+                  alt="Image of customer named Hannah Smith"
+                />
+                <blockquote class="testimonial-text">
+                  I got Omnifood for the whole family, and it frees up so much
+                  time! Plus, everything is organic and vegan and without
+                  plastic.
+                </blockquote>
+                <span class="testimonial-customer">-Hannah Smith</span>
+              </figure>
+            </li>
           </ul>
+          <div class="btn-dots flex">
+            <button class="btn-dot active-dot"></button>
+            <button class="btn-dot"></button>
+            <button class="btn-dot"></button>
+            <button class="btn-dot"></button>
+          </div>
         </div>
       </div>
     </section>
