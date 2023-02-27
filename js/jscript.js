@@ -50,15 +50,12 @@ btnSlidesEl.forEach((btnSlides) => {
 
 //Dot button click event
 btnDotsEL.addEventListener("click", function (e) {
-  switch (e.target.classList.value) {
-    case "btn-dot":
-      const curDot = btnDotsEL.querySelector(".active-dot");
+  if (e.target.classList.value === "btn-dot") {
+    const curDot = btnDotsEL.querySelector(".active-dot");
 
-      curIndex = [...btnDotsEL.children].indexOf(curDot);
-      nextIndex = [...btnDotsEL.children].indexOf(e.target);
-      setNextPrevSlide(curIndex, nextIndex);
-      console.log(e.target);
-      break;
+    curIndex = [...btnDotsEL.children].indexOf(curDot);
+    nextIndex = [...btnDotsEL.children].indexOf(e.target);
+    setNextPrevSlide(curIndex, nextIndex);
   }
 });
 
@@ -71,3 +68,16 @@ function setNextPrevSlide(curIndex, nextIndex) {
   slidesEl.children[nextIndex].classList.add("active-slide");
   btnDotsEL.children[nextIndex].classList.add("active-dot");
 }
+
+//Auto Slide
+(function autoSlide() {
+  const activeSlide = document.querySelector(".active-slide");
+  curIndex = [...slidesEl.children].indexOf(activeSlide);
+  lastIndex = slidesEl.children.length - 1;
+
+  let nextIndex = curIndex === lastIndex ? 0 : curIndex + 1;
+
+  setNextPrevSlide(curIndex, nextIndex);
+
+  setTimeout(autoSlide, 2000);
+})();
