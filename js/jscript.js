@@ -79,5 +79,5 @@ function setNextPrevSlide(curIndex, nextIndex) {
 
   setNextPrevSlide(curIndex, nextIndex);
 
-  setTimeout(autoSlide, 3000);
+  setTimeout(autoSlide, 5000);
 })();
