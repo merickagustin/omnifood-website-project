@@ -62,6 +62,15 @@
   }
 }
 
+/*******For devices with mouse********/
+@media (hover: hover) {
+  .btn-dot:hover {
+    cursor: pointer;
+    background-color: #e67e22 !important;
+    transition: all delay 0.3s ease-in;
+  }
+}
+
 /* @media (max-width: 778px) {
   .main-nav {
     justify-content: center;

@@ -23,7 +23,8 @@ const slidesEl = document.querySelector(".slider-container");
 const btnDotsEL = document.querySelector(".btn-dots");
 
 let curIndex = 0,
-  lastIndex = 0;
+  lastIndex = 0,
+  timeout;
 
 //Button Next/Prev slide click event
 btnSlidesEl.forEach((btnSlides) => {
@@ -45,6 +46,7 @@ btnSlidesEl.forEach((btnSlides) => {
     }
 
     setNextPrevSlide(curIndex, nextIndex);
+    resetTimeout();
   });
 });
 
@@ -56,6 +58,7 @@ btnDotsEL.addEventListener("click", function (e) {
     curIndex = [...btnDotsEL.children].indexOf(curDot);
     nextIndex = [...btnDotsEL.children].indexOf(e.target);
     setNextPrevSlide(curIndex, nextIndex);
+    resetTimeout();
   }
 });
 
@@ -70,7 +73,8 @@ function setNextPrevSlide(curIndex, nextIndex) {
 }
 
 //Auto Slide
-(function autoSlide() {
+
+function autoSlide() {
   const activeSlide = document.querySelector(".active-slide");
   curIndex = [...slidesEl.children].indexOf(activeSlide);
   lastIndex = slidesEl.children.length - 1;
@@ -79,5 +83,12 @@ function setNextPrevSlide(curIndex, nextIndex) {
 
   setNextPrevSlide(curIndex, nextIndex);
 
-  setTimeout(autoSlide, 5000);
-})();
+  timeout = setTimeout(autoSlide, 5000);
+}
+
+autoSlide();
+
+function resetTimeout() {
+  clearTimeout(timeout);
+  timeout = setTimeout(autoSlide, 5000);
+}
