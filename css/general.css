@@ -33,7 +33,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.grid-4-columns {
+.grid-6-columns {
   grid-template-columns: repeat(6, 1fr);
 }
 
