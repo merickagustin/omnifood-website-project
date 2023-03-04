@@ -65,6 +65,7 @@ body {
 }
 
 /*************************/
+.btn,
 .nav-link.cta-link:link,
 .nav-link.cta-link:visited,
 .btn-link:link,
@@ -92,9 +93,6 @@ strong {
 }
 
 /* HELPER SELECTOR */
-/* .center {
-  text-align: center;
-} */
 
 .margin-top-l {
   margin-top: 3.2rem;
