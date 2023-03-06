@@ -1,3 +1,9 @@
+/**********************SET YEAR*****************************/
+const curYear = new Date().getFullYear();
+const curYearEl = document.querySelector(".year");
+
+curYearEl.textContent = curYear;
+
 /**********************MOBILE NAVIGATION********************/
 const menuNavEl = document.querySelector(".btn-mobile-nav");
 

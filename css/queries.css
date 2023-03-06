@@ -6,34 +6,174 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
-/***************Landscape Tablets Device********************/
-
-@media (min-width: 778px) {
-  .main-nav {
-    justify-content: center;
-    align-items: center;
-    background-color: unset;
-    width: auto;
-    height: auto;
-    position: unset;
-
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .main-nav-list {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  .btn-mobile-nav {
-    display: none;
+/***************Mobile Device*************************/
+@media (min-width: 400px) and (max-width: 699px) {
+  .logos img {
+    width: 60%;
   }
 }
 
-/***************Tablets Device*******************************/
+@media (min-width: 400px) {
+  .steps {
+    margin-top: 3.2rem;
+  }
+
+  .slider-container {
+    height: 32rem;
+  }
+
+  .price-plan--complete::after {
+    top: 6%;
+    right: -16%;
+  }
+}
+
+@media (min-width: 448px) {
+  .price-plan--complete::after {
+    top: 9%;
+    right: -11%;
+  }
+}
+
+@media (min-width: 500px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps div:nth-child(1) {
+    grid-column: 2;
+  }
+
+  .steps div:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .steps div:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .meal-attribute {
+    font-size: 2.4rem;
+  }
+
+  .meal-tag-item {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 546px) {
+  .testimonial-customer {
+    font-size: 1.6rem;
+    margin-top: 2.4rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.8rem;
+  }
+
+  .price-plan--complete::after {
+    top: 10%;
+    right: -9%;
+  }
+}
+
+@media (min-width: 594px) {
+  .img-item {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .meals-section .subcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    row-gap: 3.2rem;
+    padding: 3.2rem 1.2rem 0 1.2rem;
+  }
+
+  .diets-container {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  .container-all-recipes {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+
+  .galleries {
+    gap: 1.2rem;
+  }
+
+  .pricing-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    padding: 3.2rem 1.6rem;
+  }
+
+  .price-plan--complete::after {
+    font-size: 1rem;
+    top: 8%;
+    right: -16%;
+  }
+
+  .plan-container {
+    padding: 2.4rem 1.2rem;
+  }
+
+  .plan-header {
+    margin-bottom: 3.2rem;
+  }
+
+  .plan-icon {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+
+  .btn-link:link,
+  .btn-link:visited {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .feature-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+  }
+
+  .feature-icon {
+    height: 2.6rem;
+    width: 2.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .feature-title {
+    font-size: 2rem;
+  }
+
+  .feature-text {
+    font-size: 1.4rem;
+  }
+
+  footer .container {
+    row-gap: 4.8rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.4rem;
+  }
+
+  .footer-heading {
+    font-size: 1.8rem;
+  }
+}
+
+/***************Tablet & Smaller Laptop Device********************/
 @media (min-width: 700px) {
   .logos {
     grid-template-columns: repeat(5, 1fr);
@@ -64,30 +204,135 @@ FONT SIZE SYSTEM (px)
   .logos img:last-child {
     grid-column: 5;
   }
-}
 
-/***************Mobile Device*************************/
-@media (min-width: 400px) and (max-width: 699px) {
-  .logos img {
-    width: 60%;
+  .price-plan--complete::after {
+    font-size: 1.2rem;
+    top: 9%;
+    right: -13%;
+  }
+
+  .cta-section .container {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+  }
+
+  .cta-img-box {
+    height: unset;
+    background-image: url("../img/eating.jpg");
+    opacity: 0.6;
+    background-size: cover;
+    background-position: center;
+  }
+
+  footer .container {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3.6rem;
+  }
+
+  .social-footer-col {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .address-footer-col {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .nav-footer-col:nth-child(1) {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  .nav-footer-col:nth-child(2) {
+    grid-row: 1;
+    grid-column: 4;
+  }
+  .nav-footer-col:nth-child(3) {
+    grid-row: 1;
+    grid-column: 5;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.2rem;
+  }
+
+  .footer-heading {
+    font-size: 1.6rem;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   * {
-    /* Set to 10px font-size as default */
+    /* Set to 12px font-size as default */
     font-size: 75%;
   }
 
-  .steps {
-    margin-top: 3.2rem;
+  .meal-attribute {
+    font-size: 2rem;
+  }
+
+  .meal-tag-item {
+    font-size: 2rem;
+  }
+
+  .testimonial-section .subcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+    row-gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-container {
+    height: 36rem;
+  }
+
+  .testimonial-customer {
+    font-size: 1.4rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.6rem;
+  }
+
+  .btn-dot {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .galleries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-plan--complete::after {
+    top: 6%;
+    right: -18%;
   }
 }
 
-@media (min-width: 594px) {
-  .img-item {
-    height: 5rem;
-    width: 5rem;
+@media (min-width: 980px) {
+  .main-nav {
+    justify-content: center;
+    align-items: center;
+    background-color: unset;
+    width: auto;
+    height: auto;
+    position: unset;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .main-nav-list {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .btn-mobile-nav {
+    display: none;
   }
 }
 
@@ -99,37 +344,3 @@ FONT SIZE SYSTEM (px)
     transition: all delay 0.3s ease-in;
   }
 }
-
-/* @media (max-width: 778px) {
-  .main-nav {
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(100%);
-
-    transition: all ease-in 0.4s;
-  }
-
-  .nav--open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .main-nav-list {
-    flex-direction: column;
-  }
-
-  .btn-mobile-nav {
-    opacity: 1;
-    visibility: visible;
-  }
-} */

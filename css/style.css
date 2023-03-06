@@ -30,7 +30,7 @@ Line Height:
 /*****************NAVIGATION*********************/
 .nav-header {
   justify-content: space-between;
-  padding: 2.4rem 3.2rem;
+  padding: 2.4rem 2.4rem;
   background-color: #fdf2e9;
 }
 
@@ -383,7 +383,7 @@ Line Height:
 }
 
 .meal-attribute > span > strong {
-  font-size: 1.6rem;
+  font-size: inherit;
 }
 
 .checklist-icon {
@@ -466,7 +466,6 @@ Line Height:
 
 .testimonials {
   position: relative;
-  margin-top: 4.8rem;
 }
 
 .testimonial-img {
@@ -482,12 +481,9 @@ Line Height:
 }
 
 .testimonial-customer {
+  display: block;
   font-size: 1.4rem;
   color: #5f5f5f;
-}
-
-.testimonial-customer {
-  display: block;
   margin-top: 1.2rem;
 }
 
@@ -614,7 +610,7 @@ Line Height:
 }
 
 .plan-description {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .price-plan--starter {
@@ -646,12 +642,12 @@ Line Height:
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   gap: 1.2rem;
 }
 
 .plan-benefit > span > strong {
-  font-size: 1.6rem;
+  font-size: inherit;
 }
 
 .plan-icon {
@@ -783,9 +779,9 @@ footer {
   border-top: 1px solid #eee;
 }
 
-.container {
+footer .container {
   column-gap: 1.6rem;
-  row-gap: 3.2rem;
+  row-gap: 3rem;
 }
 
 .nav-footer-col {
