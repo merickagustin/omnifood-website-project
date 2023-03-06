@@ -38,6 +38,7 @@ FONT SIZE SYSTEM (px)
 @media (min-width: 500px) {
   .steps {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.8rem;
   }
 
   .steps div:nth-child(1) {
@@ -225,8 +226,8 @@ FONT SIZE SYSTEM (px)
   }
 
   footer .container {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3.6rem;
+    grid-template-columns: 0.25fr 0.25fr repeat(3, 0.17fr);
+    gap: 2.4rem;
   }
 
   .social-footer-col {
@@ -268,6 +269,27 @@ FONT SIZE SYSTEM (px)
     font-size: 75%;
   }
 
+  .hero-text {
+    margin-bottom: 3.2rem;
+  }
+
+  .img-item {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+
+  .meals-section .subcontainer {
+    gap: 2.4rem;
+  }
+
+  .meal-name {
+    margin-bottom: 2.4rem;
+  }
+
+  .meal-attributes {
+    gap: 1.6rem;
+  }
+
   .meal-attribute {
     font-size: 2rem;
   }
@@ -289,11 +311,11 @@ FONT SIZE SYSTEM (px)
   }
 
   .testimonial-customer {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .testimonial-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .btn-dot {
@@ -305,9 +327,109 @@ FONT SIZE SYSTEM (px)
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .plan-container {
+    padding: 3.2rem 2.4rem;
+  }
+
+  .plan-header {
+    margin-bottom: 4.8rem;
+  }
+
   .price-plan--complete::after {
     top: 6%;
-    right: -18%;
+    right: -15%;
+  }
+
+  .cta-form-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin: 0.8rem 0 2.4rem 0;
+  }
+
+  .cta-form label {
+    font-size: 1.2rem;
+  }
+
+  .cta-form input,
+  .cta-form select {
+    font-size: 1.6rem;
+  }
+
+  footer .container {
+    grid-template-columns: 0.25fr 0.25fr repeat(3, 0.17fr);
+    gap: 1.6rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-section {
+    padding: 8rem 2.4rem 8rem 2.4rem;
+  }
+
+  .featured-section {
+    padding: 8rem 2.4rem;
+  }
+
+  .hta-section {
+    padding: 8rem 2.4rem;
+  }
+
+  .meals-section {
+    padding: 8rem 2.4rem;
+  }
+
+  .meals-section .subcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2.4rem;
+  }
+
+  .diets-container {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .container-all-recipes {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+  }
+
+  .testimonial-section {
+    padding: 8rem 2.4rem 2.4rem 2.4rem;
+  }
+
+  .btn-link:link,
+  .btn-link:visited {
+    font-size: 1.8rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .pricing-section {
+    padding: 13.6rem 2.4rem 8rem 2.4rem;
+  }
+
+  .pricing-container {
+    gap: 3.2rem;
+  }
+
+  .plan-container {
+    padding: 3.2rem;
+  }
+
+  .price-plan--complete::after {
+    top: 6%;
+    right: -13%;
+  }
+
+  .plan-details-container {
+    margin-bottom: 6.4rem;
+  }
+
+  .cta-section {
+    padding: 8rem 2.4rem;
+  }
+
+  footer {
+    padding: 8rem 2.4rem;
   }
 }
 
@@ -335,6 +457,74 @@ FONT SIZE SYSTEM (px)
     display: none;
   }
 }
+
+@media (min-width: 1000px) {
+  .hero-section {
+    text-align: unset;
+    display: flex;
+    gap: 3.2rem;
+    flex-direction: row;
+  }
+
+  .hero-content {
+    margin-left: auto;
+    max-width: 50rem;
+  }
+
+  .hero-img-container {
+    margin-right: auto;
+    max-width: 50rem;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  /****ALL CONTAINERS SET TO MAX-WIDTH 90REM OF EVERY SECTION******/
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  .steps {
+    gap: 4.8rem;
+    margin-top: 6.4rem;
+  }
+
+  .pricing-container {
+    padding: 3.2rem 4.8rem;
+  }
+
+  .price-plan--complete::after {
+    top: 8%;
+    right: -11%;
+  }
+
+  .feature-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cta-section .container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+
+  .cta-form {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-form div {
+    align-self: self-end;
+    justify-self: start;
+    width: 100%;
+  }
+}
+
+/* @media (min-width: 1400px) {
+  
+} */
 
 /*******For devices with mouse********/
 @media (hover: hover) {
