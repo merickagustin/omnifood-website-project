@@ -760,9 +760,16 @@ Line Height:
 }
 
 .btn--sign-up {
+  width: 100%;
   border: none;
   font-family: inherit;
   background-color: #333;
+}
+
+.btn--sign-up:hover {
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s;
 }
 
 .cta-form input::placeholder {
@@ -797,12 +804,6 @@ footer .container {
 .address-footer-col {
   grid-row: 2;
   grid-column: 4 / span 3;
-}
-
-.nav-footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
 }
 
 .footer-nav {

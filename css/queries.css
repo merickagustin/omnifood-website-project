@@ -307,6 +307,7 @@ FONT SIZE SYSTEM (px)
   }
 
   .slider-container {
+    margin-top: 6.4rem;
     height: 36rem;
   }
 
@@ -482,7 +483,7 @@ FONT SIZE SYSTEM (px)
 
   /****ALL CONTAINERS SET TO MAX-WIDTH 90REM OF EVERY SECTION******/
   .container {
-    max-width: 90rem;
+    max-width: 100rem;
     margin: 0 auto;
   }
 
@@ -491,12 +492,17 @@ FONT SIZE SYSTEM (px)
     margin-top: 6.4rem;
   }
 
+  .meals-section .subcontainer {
+    padding: 6.4rem 1.2rem 0 1.2rem;
+  }
+
   .pricing-container {
-    padding: 3.2rem 4.8rem;
+    padding: 6.4rem 9.6rem 3.2rem 9.6rem;
+    gap: 4.8rem;
   }
 
   .price-plan--complete::after {
-    top: 8%;
+    top: 5%;
     right: -11%;
   }
 
@@ -520,11 +526,33 @@ FONT SIZE SYSTEM (px)
     justify-self: start;
     width: 100%;
   }
+
+  .footer-heading {
+    margin-bottom: 3.2rem;
+  }
+
+  .footer-nav {
+    gap: 2.4rem;
+  }
 }
 
-/* @media (min-width: 1400px) {
-  
-} */
+/***************Laptop & Desktop Device********************/
+
+@media (min-width: 1200px) {
+  .plan-container {
+    padding: 6.4rem;
+  }
+
+  /* .pricing-container {
+    padding: 6.4rem 9.6rem 3.2rem 9.6rem;
+  } */
+}
+
+@media (min-width: 1400px) {
+  .galleries {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /*******For devices with mouse********/
 @media (hover: hover) {
