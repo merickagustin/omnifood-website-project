@@ -371,6 +371,10 @@ FONT SIZE SYSTEM (px)
     padding: 8rem 2.4rem;
   }
 
+  .logos {
+    gap: 2.4rem;
+  }
+
   .hta-section {
     padding: 8rem 2.4rem;
   }
@@ -551,6 +555,10 @@ FONT SIZE SYSTEM (px)
 @media (min-width: 1400px) {
   .galleries {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-header {
+    padding: 2.4rem 4.8rem;
   }
 }
 

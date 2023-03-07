@@ -62,6 +62,7 @@ Line Height:
 }
 
 .main-nav-list {
+  list-style: none;
   flex-direction: column;
   gap: 3.2rem;
   text-align: center;
@@ -71,6 +72,16 @@ Line Height:
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+}
+
+/*This is work in progress*/
+.sticky {
+  top: 0;
+  width: 100%;
+  /*not using sticky because of use of overflow in the body element for hiding mobile menu nav*/
+  position: fixed;
+
+  z-index: 9999;
 }
 
 .nav-link:link,
@@ -309,6 +320,7 @@ Line Height:
 }
 
 .meal-card {
+  overflow: hidden;
   grid-template-columns: 1fr;
   justify-content: start;
   align-items: center;
@@ -594,6 +606,7 @@ Line Height:
 .plan-container {
   border-radius: 12px;
   padding: 3.2rem;
+  overflow: hidden;
 }
 
 .plan-name {

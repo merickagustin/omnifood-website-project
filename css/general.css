@@ -89,6 +89,7 @@ body {
 .btn-link:hover,
 .btn-link:active {
   background-color: #b8651b;
+  transition: all 0.3s;
 }
 
 strong {
