@@ -32,16 +32,14 @@ linksEl.forEach(function (link) {
         top: 0,
         behavior: "smooth",
       });
-    } else if (
-      href.value != "#" &&
-      href.value.startsWith("#") &&
-      link.classList.name != "btn-link"
-    ) {
+    } else if (href.value != "#" && href.value.startsWith("#")) {
       document.querySelector(href.value).scrollIntoView({ behavior: "smooth" });
-      setNavAction(
-        menuNavEl.children,
-        toggleClass.bind(this, navEL, "nav--open")
-      );
+      if (!link.classList.contains("btn-link")) {
+        setNavAction(
+          menuNavEl.children,
+          toggleClass.bind(this, navEL, "nav--open")
+        );
+      }
     }
   });
 });
