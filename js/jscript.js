@@ -98,3 +98,27 @@ function resetTimeout() {
   clearTimeout(timeout);
   timeout = setTimeout(autoSlide, 5000);
 }
+
+/**********************SMOOTH SCROLL***************************/
+//Click Event for smooth scroll
+let linksEl = document.querySelectorAll("a:link");
+
+linksEl.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.attributes.getNamedItem("href");
+    if (href.value == "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else if (href.value != "#" && href.value.startsWith("#")) {
+      document.querySelector(href.value).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+/*********************STICKY ANIMATION****************************/
+// function handleSections(windows)
+
+// IntersectionObserver();
