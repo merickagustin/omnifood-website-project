@@ -2,8 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   /* Set to 10px font-size as default */
   font-size: 62.5%;
+
+  /* To hide menu on the right side of the screen*/
+  /* This must need to be place both body and html element*/
+  overflow-x: hidden;
 }
 
 body {
@@ -12,7 +19,8 @@ body {
 
   position: relative;
 
-  /* To hide menu on the right side of the screen */
+  /* To hide menu on the right side of the screen*/
+  /* This must need to be place both body and html element*/
   overflow-x: hidden;
 }
 
@@ -117,5 +125,5 @@ strong {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.6rem rgba(230, 125, 34, 0.5);
+  box-shadow: 0 0 0 0.4rem rgba(230, 125, 34, 0.5);
 }

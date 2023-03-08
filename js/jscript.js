@@ -1,3 +1,15 @@
+/**************************GLOBAL***************************/
+const navEL = document.querySelector(".main-nav");
+const menuNavEl = document.querySelector(".btn-mobile-nav");
+const linksEl = document.querySelectorAll("a:link");
+const btnSlidesEl = document.querySelectorAll(".btn-slide");
+const slidesEl = document.querySelector(".slider-container");
+const btnDotsEL = document.querySelector(".btn-dots");
+
+let curIndex = 0,
+  lastIndex = 0,
+  timeout;
+
 /**********************SET YEAR*****************************/
 const curYear = new Date().getFullYear();
 const curYearEl = document.querySelector(".year");
@@ -5,14 +17,36 @@ const curYearEl = document.querySelector(".year");
 curYearEl.textContent = curYear;
 
 /**********************MOBILE NAVIGATION********************/
-const menuNavEl = document.querySelector(".btn-mobile-nav");
-
 menuNavEl.addEventListener("click", function () {
-  const navEL = document.querySelector(".main-nav");
-  navEL.classList.toggle("nav--open");
-
   const childrenEl = this.children;
+  setNavAction(childrenEl, toggleClass.bind(this, navEL, "nav--open"));
+});
 
+//Click Event for smooth scroll
+linksEl.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.attributes.getNamedItem("href");
+    if (href.value == "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else if (
+      href.value != "#" &&
+      href.value.startsWith("#") &&
+      link.classList.name != "btn-link"
+    ) {
+      document.querySelector(href.value).scrollIntoView({ behavior: "smooth" });
+      setNavAction(
+        menuNavEl.children,
+        toggleClass.bind(this, navEL, "nav--open")
+      );
+    }
+  });
+});
+
+function setNavAction(childrenEl, toggleClass) {
   for (i = 0; i < childrenEl.length; i++) {
     if (childrenEl[i].name == "menu-outline") {
       childrenEl[i].name = "close-outline";
@@ -20,11 +54,17 @@ menuNavEl.addEventListener("click", function () {
       childrenEl[i].name = "menu-outline";
     }
   }
-});
+
+  toggleClass();
+}
+
+function toggleClass(element, toggleClass) {
+  element.classList.toggle(toggleClass);
+}
 
 /*********************STICKY ANIMATION****************************/
 function intersectionCallback(entries) {
-  entries.forEach((entry) => {
+  entries.forEach(function (entry) {
     navHeaderEl = document.querySelector(".nav-header");
     if (!entry.isIntersecting) {
       navHeaderEl.classList.add("sticky");
@@ -36,6 +76,7 @@ function intersectionCallback(entries) {
 
 const options = {
   root: null,
+  threshold: 0,
   rootMargin: "-113px",
 };
 
@@ -44,17 +85,9 @@ const intersectObs = new IntersectionObserver(intersectionCallback, options);
 intersectObs.observe(document.querySelector(".hero-section"));
 
 /**********************TESTIMONIAL CAROUSEL***************************/
-//Get elements
-const btnSlidesEl = document.querySelectorAll(".btn-slide");
-const slidesEl = document.querySelector(".slider-container");
-const btnDotsEL = document.querySelector(".btn-dots");
-
-let curIndex = 0,
-  lastIndex = 0,
-  timeout;
 
 //Button Next/Prev slide click event
-btnSlidesEl.forEach((btnSlides) => {
+btnSlidesEl.forEach(function (btnSlides) {
   btnSlides.addEventListener("click", function () {
     const self = this;
     const activeSlide = slidesEl.querySelector(".active-slide");
@@ -100,7 +133,6 @@ function setNextPrevSlide(curIndex, nextIndex) {
 }
 
 //Auto Slide
-
 function autoSlide() {
   const activeSlide = document.querySelector(".active-slide");
   curIndex = [...slidesEl.children].indexOf(activeSlide);
@@ -119,22 +151,3 @@ function resetTimeout() {
   clearTimeout(timeout);
   timeout = setTimeout(autoSlide, 5000);
 }
-
-/**********************SMOOTH SCROLL***************************/
-//Click Event for smooth scroll
-let linksEl = document.querySelectorAll("a:link");
-
-linksEl.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.attributes.getNamedItem("href");
-    if (href.value == "#") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else if (href.value != "#" && href.value.startsWith("#")) {
-      document.querySelector(href.value).scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});

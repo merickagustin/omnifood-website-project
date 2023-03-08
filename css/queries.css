@@ -264,7 +264,7 @@ FONT SIZE SYSTEM (px)
 }
 
 @media (min-width: 800px) {
-  * {
+  html {
     /* Set to 12px font-size as default */
     font-size: 75%;
   }
@@ -420,6 +420,10 @@ FONT SIZE SYSTEM (px)
     padding: 3.2rem;
   }
 
+  .plan-sign-up {
+    margin-top: 6.4rem;
+  }
+
   .price-plan--complete::after {
     top: 6%;
     right: -13%;
@@ -506,8 +510,8 @@ FONT SIZE SYSTEM (px)
   }
 
   .price-plan--complete::after {
-    top: 5%;
-    right: -11%;
+    top: 6%;
+    right: -13%;
   }
 
   .feature-container {
