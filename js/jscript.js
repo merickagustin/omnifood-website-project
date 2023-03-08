@@ -22,6 +22,27 @@ menuNavEl.addEventListener("click", function () {
   }
 });
 
+/*********************STICKY ANIMATION****************************/
+function intersectionCallback(entries) {
+  entries.forEach((entry) => {
+    navHeaderEl = document.querySelector(".nav-header");
+    if (!entry.isIntersecting) {
+      navHeaderEl.classList.add("sticky");
+    } else {
+      navHeaderEl.classList.remove("sticky");
+    }
+  });
+}
+
+const options = {
+  root: null,
+  rootMargin: "-113px",
+};
+
+const intersectObs = new IntersectionObserver(intersectionCallback, options);
+
+intersectObs.observe(document.querySelector(".hero-section"));
+
 /**********************TESTIMONIAL CAROUSEL***************************/
 //Get elements
 const btnSlidesEl = document.querySelectorAll(".btn-slide");
@@ -117,8 +138,3 @@ linksEl.forEach(function (link) {
     }
   });
 });
-
-/*********************STICKY ANIMATION****************************/
-// function handleSections(windows)
-
-// IntersectionObserver();

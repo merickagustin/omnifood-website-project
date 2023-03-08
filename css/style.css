@@ -76,6 +76,7 @@ Line Height:
 
 /*This is work in progress*/
 .sticky {
+  background-color: rgba(253, 242, 233, 0.9);
   top: 0;
   width: 100%;
   /*not using sticky because of use of overflow in the body element for hiding mobile menu nav*/
@@ -779,7 +780,8 @@ Line Height:
   background-color: #333;
 }
 
-.btn--sign-up:hover {
+.btn--sign-up:hover,
+.btn--sign-up:focus {
   color: #333;
   background-color: #fff;
   transition: all 0.3s;
@@ -820,9 +822,15 @@ footer .container {
 }
 
 .footer-nav {
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+
+.footer-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .footer-link:link,
@@ -838,13 +846,9 @@ footer .container {
   color: #333;
 }
 
-.footer-heading {
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
 /*******SOCIAL FOOTER***********/
 .social-links {
+  list-style: none;
   display: flex;
   flex-direction: row;
   gap: 2.4rem;

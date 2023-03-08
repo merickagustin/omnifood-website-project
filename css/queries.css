@@ -547,9 +547,14 @@ FONT SIZE SYSTEM (px)
     padding: 6.4rem;
   }
 
-  /* .pricing-container {
-    padding: 6.4rem 9.6rem 3.2rem 9.6rem;
-  } */
+  .footer-heading {
+    font-size: 1.6rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 1400px) {

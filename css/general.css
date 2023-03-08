@@ -4,8 +4,6 @@
   box-sizing: border-box;
   /* Set to 10px font-size as default */
   font-size: 62.5%;
-  /* To hide menu on the right side of the screen */
-  overflow-x: hidden;
 }
 
 body {
@@ -13,6 +11,9 @@ body {
   color: #333;
 
   position: relative;
+
+  /* To hide menu on the right side of the screen */
+  overflow-x: hidden;
 }
 
 .flex {
@@ -112,4 +113,9 @@ strong {
 
 .margin-bottom-md {
   margin-bottom: 4.8rem;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6rem rgba(230, 125, 34, 0.5);
 }
